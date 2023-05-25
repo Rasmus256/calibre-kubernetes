@@ -3,11 +3,9 @@ kind: Ingress
 metadata:
   name: calibre
   namespace: calibre
-  annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: 20m
 spec:
   rules:
-  - host: <your-domain>
+  - host: calibre.hosrasmus.hopto.org
     http:
       paths:
       - path: /
