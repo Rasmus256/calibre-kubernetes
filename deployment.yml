@@ -39,7 +39,7 @@ spec:
           volumeMounts:
             - name: calibre-config
               mountPath: /config
-            - name: calibre-books
+            - name: calibre-books-2
               mountPath: /books
           resources:
             requests:
