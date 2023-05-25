@@ -5,7 +5,7 @@ metadata:
   namespace: calibre
 spec:
   rules:
-  - host: calibre.hosrasmus.hopto.org
+  - host: "calibre.hosrasmus.hopto.org"
     http:
       paths:
       - path: /
