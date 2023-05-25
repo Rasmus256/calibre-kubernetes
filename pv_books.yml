@@ -13,3 +13,11 @@ spec:
     storageClassName: local-storage
     local:
         path: /opt/data/calibre/books/
+    nodeAffinity: 
+     required: 
+       nodeSelectorTerms: 
+       - matchExpressions: 
+         - key: name 
+           operator: In 
+           values: 
+           - "nakedpc"
