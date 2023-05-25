@@ -4,11 +4,12 @@ metadata:
     name: calibre-books
     namespace: calibre
 spec:
+    volumeMode: Filesysgem
     capacity:
         storage: 1Gi
     accessModes:
         - ReadWriteOnce
     persistentVolumeReclaimPolicy: Recycle
     storageClassName: local-storage
-    localPath:
-        path: /var/data/calibre/books/
+    local:
+        path: /opt/data/calibre/books/
