@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-    name: calibre-books
+    name: calibre-books-2
     namespace: calibre
 spec:
     volumeMode: Filesystem
