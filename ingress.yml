@@ -1,6 +1,10 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
+  annotations:
+    acme.cert-manager.io/http01-edit-in-place: 'true'
+    acme.cert-manager.io/http01-ingress-class: traefik
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   name: calibre
   namespace: calibre
 spec:
@@ -9,7 +13,13 @@ spec:
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: calibre
-          servicePort: 80
-
+          service:
+            name: calibre
+            port:
+              name: http-port
+  tls:
+    - hosts:
+        - calibre.hosrasmus.hopto.org
+      secretName: calibrecert-wild-4-tls
