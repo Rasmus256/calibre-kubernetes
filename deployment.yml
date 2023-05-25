@@ -52,6 +52,6 @@ spec:
         - name: calibre-config
           persistentVolumeClaim:
             claimName: calibre-config
-        - name: calibre-books
+        - name: calibre-books-2
           persistentVolumeClaim:
             claimName: calibre-books
