@@ -1,23 +1,23 @@
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-    name: calibre-books-2
-    namespace: calibre
-spec:
-    volumeMode: Filesystem
-    capacity:
-        storage: 1Gi
-    accessModes:
-        - ReadWriteOnce
-    persistentVolumeReclaimPolicy: Recycle
-    storageClassName: local-storage
-    local:
-        path: /opt/data/calibre/books/
-    nodeAffinity: 
-     required: 
-       nodeSelectorTerms: 
-       - matchExpressions: 
-         - key: name 
-           operator: In 
-           values: 
-           - "nakedpc"
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#     name: calibre-books-2
+#     namespace: calibre
+# spec:
+#     volumeMode: Filesystem
+#     capacity:
+#         storage: 1Gi
+#     accessModes:
+#         - ReadWriteOnce
+#     persistentVolumeReclaimPolicy: Recycle
+#     storageClassName: local-storage
+#     local:
+#         path: /opt/data/calibre/books/
+#     nodeAffinity: 
+#      required: 
+#        nodeSelectorTerms: 
+#        - matchExpressions: 
+#          - key: name 
+#            operator: In 
+#            values: 
+#            - "nakedpc"
