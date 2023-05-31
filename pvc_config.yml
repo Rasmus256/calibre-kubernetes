@@ -10,4 +10,3 @@ spec:
         requests:
             storage: 200Mi
     storageClassName: local-path
-    volumeName: calibre-config
